@@ -1,0 +1,6 @@
+require File.dirname(__FILE__) + '/geographer/geocoder'
+require File.dirname(__FILE__) + '/geographer/header'
+require File.dirname(__FILE__) + '/geographer/icon'
+require File.dirname(__FILE__) + '/geographer/map'
+require File.dirname(__FILE__) + '/geographer/marker'
+require File.dirname(__FILE__) + '/geographer/polyline'
