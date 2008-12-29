@@ -1,13 +1,27 @@
 Geographer
 ==========
 
-Introduction goes here.
+This plugin has basic Google mapping functionality.  It can use the Geokit geocoder if it is installed.
+If Geokit is installed, and you have a Google key already set up for it, then there is no further setup required for this plugin.
+If you don't have Geokit, then you can set the key in an initializer:
+
+  Geographer::GOOGLE_KEY = 'Your key'
 
 
 Example
 =======
 
-Example goes here.
+Put this in the <head> of your page:
+
+  <%= geographer_header %>
+
+Then put this in your page content:
+
+  <%= map_tag(:query => '1600 Pennsylvania Ave NW,Washington,DC,20500', :width => '400px', :height => '300px', :controls => [ :zoom ]) %>
+
+The geokit geocoder will find the address.  If you don't want to use the geocoder, you can set other options rather than the :query.
+
+  <%= map_tag(:center => [ 35, -167 ], :zoom => 3, :controls => [ :large ]) %>
 
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Copyright (c) 2008 Glenn Powell, released under the MIT license

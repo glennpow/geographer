@@ -45,7 +45,7 @@ module Geographer
       end
     
       script << "function initialize_gmap_#{@dom_id}() {"
-      script << "if (!GBrowserIsCompatible()) return false;"
+      script << "if (!GBrowserIsCompatible || !GBrowserIsCompatible()) return false;"
       script << "#{@dom_id} = new GMap2(document.getElementById(\"#{@dom_id}\"));"
 
       script << "  #{@dom_id}.disableDragging();" if @draggable == false
