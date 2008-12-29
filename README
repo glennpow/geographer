@@ -19,7 +19,11 @@ Then put this in your page content:
 
   <%= map_tag(:query => '1600 Pennsylvania Ave NW,Washington,DC,20500', :width => '400px', :height => '300px', :controls => [ :zoom ]) %>
 
-The geokit geocoder will find the address.  If you don't want to use the geocoder, you can set other options rather than the :query.
+The geokit geocoder will find the address.  Or you can pass a Geokit::Mappable object, as long as it uses the acts_as_mappable macro:
+
+  <%= map_tag(:mappable => @location, :width => '400px', :height => '300px', :controls => [ :zoom ]) %>
+
+If you don't want to use the geocoder, you can set the location manually, as well as set other options.
 
   <%= map_tag(:center => [ 35, -167 ], :zoom => 3, :controls => [ :large ]) %>
 
