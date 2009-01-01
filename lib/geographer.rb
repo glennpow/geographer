@@ -5,4 +5,4 @@ require File.dirname(__FILE__) + '/geographer/marker'
 require File.dirname(__FILE__) + '/geographer/polyline'
 require File.dirname(__FILE__) + '/geographer/geographer_helper'
 
-ActionView::Base.send :include, GeographerHelper
+ActionView::Base.send :include, GeographerHelper if defined?(ActionView::Base)
